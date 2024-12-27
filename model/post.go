@@ -12,8 +12,3 @@ type Post struct {
 type Posts struct {
 	Posts []Post `json:"posts"`
 }
-
-//func (post *Post) BeforeCreate(tx *gorm.DB) (err error) {
-//	post.ID = uuid.New()
-//	return
-//}
