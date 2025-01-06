@@ -14,5 +14,7 @@ func SetupRoutes(app *fiber.App) {
 	postsApi := api.Group("/posts")
 	postsApi.Get("/", handler.GetAllPosts)
 	postsApi.Get("/:id", handler.GetPost)
-	postsApi.Post("/", handler.CreatePost)
+	postsApi.Delete("/delete/:id", handler.DeletePost)
+	postsApi.Put("/post/update/:id", handler.UpdatePost)
+	postsApi.Post("/create", handler.CreatePost)
 }
